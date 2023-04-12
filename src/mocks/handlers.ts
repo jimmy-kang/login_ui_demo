@@ -2,5 +2,5 @@
 import userInfoHandlers from './userInfo'
 
 export const handlers = [
-//   ...userInfoHandlers
+  //   ...userInfoHandlers
 ]
