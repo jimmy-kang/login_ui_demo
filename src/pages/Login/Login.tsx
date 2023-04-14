@@ -9,6 +9,7 @@ import FormCheckbox from './components/FormCheckbox'
 const LoginPage = (): JSX.Element => {
   const [isLengthFormat, setLengthFormat] = useState(false)
   const [isNumberFormat, setNumberFormat] = useState(false)
+  const [isChecked, setChecked] = useState(false)
 
   const checkPasswordFormat = (val: string): void => {
     const is8digits = val.length >= 8
@@ -61,7 +62,7 @@ const LoginPage = (): JSX.Element => {
             <span className="slm-mr-2 font__base">
               Or use your email for registration
             </span>
-            <div className="slm-h-px slm-w-188px slm-bg-black"></div>
+            <div className="slm-h-px slm-w-182px slm-bg-black"></div>
           </div>
           <form onSubmit={handleSubmit}>
             <div className="slm-flex slm-justify-between slm-mb-4">
@@ -119,7 +120,13 @@ const LoginPage = (): JSX.Element => {
                 </div>
               </div>
               <div className="slm-grid slm-gap-y-6">
-                <FormCheckbox text="By creating account, you agree to accept our Privacy Policy, Terms of Service and Notification settings." />
+                <FormCheckbox
+                  text="By creating account, you agree to accept our Privacy Policy, Terms of Service and Notification settings."
+                  onChange={() => {
+                    setChecked(!isChecked)
+                  }}
+                  isChecked={isChecked}
+                />
                 <button
                   className="slm-w-full slm-h-12 slm-rounded slm-bg-blue-base slm-text-white slm-text-sm font__base"
                   type="submit"
@@ -128,8 +135,10 @@ const LoginPage = (): JSX.Element => {
                 </button>
               </div>
             </div>
-            <div className="slm-mt-4 slm-text-13px slm-flex slm-justify-center slm-gap-x-1">
-              <span>Already have an account?</span>
+            <div className="slm-mt-4 slm-text-13px slm-flex slm-justify-center slm-gap-x-1 font__base">
+              <span className="slm-text-gray-base">
+                Already have an account?
+              </span>
               <button className="slm-text-blue-base">Log in</button>
             </div>
           </form>

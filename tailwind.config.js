@@ -23,8 +23,12 @@ module.exports = {
       scale: {
         sm: '0.833'
       },
+      height: {
+        '18px': '18px'
+      },
       width: {
-        '188px': '188px',
+        '18px': '18px',
+        '182px': '182px',
         '190px': '190px',
         sign_up_width: 'calc(100% - 16px)',
       },

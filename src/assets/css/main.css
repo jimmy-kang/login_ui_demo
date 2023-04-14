@@ -11,4 +11,10 @@
 
 .font__base {
   font-family: 'interstate', sans-serif;
+  line-height: 1;
+}
+
+.font__normal {
+  font-family: 'interstate', sans-serif;
+  line-height: 1.2;
 }

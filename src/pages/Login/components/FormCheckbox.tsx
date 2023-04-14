@@ -1,17 +1,16 @@
 import React from 'react'
-
+import Checkbox from './Checkbox'
 interface IProps {
   text: string | JSX.Element
+  onChange: () => void
+  isChecked: boolean
 }
 
-const FormCheckbox = ({ text }: IProps): JSX.Element => {
+const FormCheckbox = ({ text, isChecked, onChange }: IProps): JSX.Element => {
   return (
     <div className="slm-flex slm-items-center slm-gap-x-2">
-      <div className="">
-        <input type="checkbox" name="checkbox" id="checkbox" />
-        <label htmlFor="checkbox" />
-      </div>
-      <p className="slm-text-13px slm-text-gray-base font__base">{text}</p>
+      <Checkbox onChange={onChange} isChecked={isChecked} />
+      <p className="slm-text-13px slm-text-gray-base font__normal">{text}</p>
     </div>
   )
 }
