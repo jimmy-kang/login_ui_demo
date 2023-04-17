@@ -4,8 +4,7 @@ import LoginPage from 'pages/Login'
 const PagesRoutes = (): JSX.Element => {
   return (
     <Routes>
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="*" element={<div>NOT FOUND</div>} />
+      <Route path="*" element={<LoginPage />} />
     </Routes>
   )
 }

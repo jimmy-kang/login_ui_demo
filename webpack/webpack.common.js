@@ -37,9 +37,9 @@ module.exports = {
     ],
   },
   output: {
-    path: path.resolve(__dirname, '..', './dist'), // outputs the build file as bundle.js to the dist directory
+    path: path.resolve(__dirname, '..', './docs'), // outputs the build file as bundle.js to the dist directory
     filename: 'bundle.js',
-    publicPath: '/', // added to reset the path for react router when refreshing the page -- fixes the cannot get path issue
+    // publicPath: '/', // added to reset the path for react router when refreshing the page -- fixes the cannot get path issue
   },
   // below config added to reset the path for react router when refreshing the page -- fixes the cannot get path issue
   devServer: {

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --config webpack/webpack.config.js --env env=dev",
-    "build": "webpack --config webpack/webpack.config.js --env env=prod",
+    "build": "webpack --config webpack/webpack.config.js --env env=dev",
     "format:autofix": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,scss}\"",
     "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,css,scss}\"",
     "lint": "eslint src/**/*.tsx src/**/*.ts",
@@ -67,7 +67,6 @@
     "html-webpack-plugin": "^5.5.0",
     "husky": "^4.3.8",
     "lint-staged": "^13.0.3",
-    "msw": "^1.1.0",
     "postcss": "^8.1.0",
     "postcss-loader": "^7.0.2",
     "prettier": "2.7.1",
@@ -79,8 +78,5 @@
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.11.1",
     "webpack-merge": "^5.8.0"
-  },
-  "msw": {
-    "workerDirectory": "public"
   }
 }
